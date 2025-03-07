@@ -1,0 +1,23 @@
+First simulation round - 04/02/2025
+Getting to know the program and parameter influences on the curve.
+
+Specs as written in Obsidian, with additional variation of Y between 10^-2 (Tatsuuma) and 500
+
+Run 1: specs as originally planned. Gave convergence issues. Changed value of Y to 500 Pa instead of 10^-2 and that worked. Also tried for 50 and 5, still worked, with as expected plastic deformation setting in earlier and earlier. 
+
+If working in Pa, length is in m. MPa and mm is another option.
+
+Run 2: reversing the change - Y = 10^-2, deformation is now very tiny (up to 5 percent of the z-axis). Thought maybe the step was too big for such a low yield stress. It's running, so maybe the issue was the combination of low Y and too large deformation in one step. Very plausible, as it's a linear solver and too lare a deformation already results in non-linear behaviour. Will check results later.
+
+Convergence error at step 2. So it's slightly better, but not much.
+
+Run 3: deformation is now 1% of the z-axis. Convergence error at step 31/61, so halfway. Was because I defined the unloading with a zero too little (went from 1% to 9.9% so of course that fails). It runs completely! Party!
+
+Run 4: I'm trying to find the limit now of how much deformation I can get in one step before it fails. 2% gives failure at step 26, which is at 0.0173 displacement of a 10-sized cube, so that's 17.3 cm displacement for a 10 meter cube. Sizing it down keeps giving convergence issues, but the weird one is up until 1.3%. It solves 1.3%, but fails to solve 1.298 % for the unloading step. 1.2% works fully. This is strange. 
+
+Run 5: increasing the yield strength by a factor 10 (so 1 Pa) let's the 1.3 % converge, so it's definitely a correlation between the deformation and the yield strength.
+
+Run 6: adjusting the Poisson ratio now. I see no difference in the stress-strain curve between 0.05 and 0.01 Poisson for 1% deformation and Y = 1e-2, but a Poisson of 0 just doesn't run/ Understandable, since that gives zero lame coefficients and therefore zero stress. So we'd need to keep it very low (could have realised this by looking at the equations, but this also works). 
+
+
+I'm going to quit now and work on PhD stuff for a bit. Tomorrow I want to do as much as possible for prepping Heidelberg ito thesis work and also look at plotting the data, but I realise this may be a stretch given how short the day is.

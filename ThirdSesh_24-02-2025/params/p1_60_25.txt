@@ -1,0 +1,10 @@
+Third simulation round - 24/02/2025
+
+Specs:
+- Y = 1 Pa
+- E = 100 Pa
+- nu = 0.05
+- 60% compression
+- solver = jax
+- 120 steps
+- 25x25x25 grid

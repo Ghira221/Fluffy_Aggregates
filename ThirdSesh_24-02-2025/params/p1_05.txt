@@ -1,0 +1,11 @@
+Third simulation round - 24/02/2025
+
+Specs:
+- Y = 1 Pa
+- E = 100 Pa
+- nu = 0.05
+- 5% compression
+- solver = umfpack
+- 10 steps
+
+

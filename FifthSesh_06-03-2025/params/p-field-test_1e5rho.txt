@@ -1,0 +1,9 @@
+Parameters for density dependent model - 03/03/2025
+
+Density field 1/r from the center. Center has 0.01 density. Works suddenly for 1e5 rho? SO it does have to do with the material.
+
+Specs:
+- Y = Tatsuuma model, C = 1
+- E = 1e5 * rho
+- nu = 0.05
+- 80% compression

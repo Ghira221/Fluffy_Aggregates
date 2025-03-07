@@ -1,0 +1,10 @@
+Second simulation round - 13/02/2025
+Getting to know the program and parameter influences on the curve.
+
+Specs:
+- Y = 1 Pa
+- E = 100 Pa
+- nu = 0.05
+- 0.1% compression
+
+

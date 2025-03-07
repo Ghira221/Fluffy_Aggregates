@@ -1,0 +1,7 @@
+Parameters for density dependent model - 03/03/2025
+
+Specs:
+- Y = Tatsuuma model, C = 1
+- E = 1 * rho
+- nu = 0.05
+- 80% compression
